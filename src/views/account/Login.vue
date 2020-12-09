@@ -1,11 +1,7 @@
 <template>
   <div class="account">
     <div class="from-wrap">
-      <a-form
-        name="custom-validation"
-        ref="ruleForm"
-        v-bind="fromConfig.layout"
-      >
+      <a-form name="custom-validation" ref="ruleForm" v-bind="layout">
         <a-form-item>
           <label>用户名</label>
           <a-input type="text" autocomplete="off" />
@@ -20,14 +16,15 @@
       </a-form>
       <div class="fs-12 text-center">
         <a href="" class="color-white">忘记密码 </a>|
-        <a href="" class="color-white">注册</a>
+        <!-- <a href="" class="color-white">注册</a> -->
+        <router-link  to="/register">注册</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { reactive } from "vue";
+import { reactive, toRefs } from "vue";
 export default {
   setup(props) {
     const fromConfig = reactive({
@@ -36,8 +33,8 @@ export default {
         wrapperCol: { span: 14 },
       },
     });
-
-    return { fromConfig };
+    const data = toRefs(fromConfig);
+    return { ...data };
   },
 };
 </script>
