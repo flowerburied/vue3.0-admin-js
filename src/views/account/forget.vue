@@ -48,13 +48,13 @@
           </a-row>
         </a-form-item>
         <a-form-item>
-          <a-button type="primary" html-type="submit" block> 登录 </a-button>
+          <a-button type="primary" html-type="submit" block> 重置密码 </a-button>
         </a-form-item>
       </a-form>
-      <div class="fs-12 text-center">
-        <router-link to="/forget">忘记密码</router-link>
+      <div class="fs-12 text-center color-white">
+        <router-link to="/" >登录</router-link>
         |
-        <router-link to="/">登录</router-link>
+        <router-link to="/register">注册</router-link>
       </div>
     </div>
   </div>

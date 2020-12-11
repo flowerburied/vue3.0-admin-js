@@ -13,7 +13,12 @@ const routes = [{
         component: () =>
             import ("../views/account/register.vue")
     },
-
+    {
+        path: "/forget",
+        name: "forget",
+        component: () =>
+            import ("../views/account/forget.vue")
+    },
 ];
 
 const router = createRouter({
